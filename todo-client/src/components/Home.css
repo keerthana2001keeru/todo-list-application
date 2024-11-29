@@ -1,0 +1,45 @@
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    
+  }
+  .todo-container{
+
+    width:350px;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+  .delete-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #000000;
+    transition: color 0.2s;
+  }
+  ul li{
+    display: flex;
+    list-style: none;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 4px;
+    color:#08869e;
+    box-shadow: 0 4px 4px #0000001c;
+
+}
+ul li i{
+    text-align: right;
+    flex:1;
+}

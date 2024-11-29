@@ -1,0 +1,16 @@
+input{
+    border-radius: 5px;
+    border:1px solid rgb(226,226,226);
+   width: 100%;
+   padding: 10px;
+   box-sizing: border-box;
+   background-color: #d8d9da;
+   outline: none;
+   
+}
+input::placeholder{
+    color:#08869e;
+}
+.createtask{
+    display: flex;
+}
