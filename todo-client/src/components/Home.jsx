@@ -7,7 +7,7 @@ import "./Home.css";
     const [todos,setTodos]=useState([]);
     const [error, setError] = useState(null);
     const fetchTodos = () => {
-        axios.get(`${import.meta.env.REACT_APP_BACKEND_BASEURL}/tasks`)
+        axios.get('http://localhost:3001/tasks')
           .then(result => {
             setTodos(result.data)
             setError(null);
@@ -24,7 +24,7 @@ import "./Home.css";
       }, [todos]);
     const handleEdit=(id,done)=>{
        
-        axios.put(`${import.meta.env.REACT_APP_BACKEND_BASEURL}/task/${id}`, {done: !done})
+        axios.put('http://localhost:3001/task/'+id, {done: !done})
         .then(result=>{
           setTodos(todos.map(todo => 
             todo._id === id ? { ...todo,done:!done }:todo
@@ -40,7 +40,7 @@ import "./Home.css";
 
         const handleDelete=(id)=>{
             console.log(id)
-            axios.delete(`${import.meta.env.REACT_APP_BACKEND_BASEURL}/task/${id}`)
+            axios.delete('http://localhost:3001/task/'+id)
             .then(result=>{
                 setTodos(todos.filter(todo => todo._id !== id));
                 console.log(result)
