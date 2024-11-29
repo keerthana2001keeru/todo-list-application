@@ -11,7 +11,7 @@ function CreateTask() {
         setError("Task cannot be empty.");
         return;
       }
-        axios.post("http://localhost:3001/tasks",{task})
+        axios.post(`${import.meta.env.REACT_APP_BACKEND_BASEURL}/tasks`,{task})
         .then(result=>{
           setError('');
           setTask("");
